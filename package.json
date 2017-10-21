@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "set NODE_ENV=dev && webpack-dev-server --progress --colors --port 8686",
+    "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.product.config.js --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mock": "node ./mock/server.js"
   },
   "author": "",
   "license": "ISC",
