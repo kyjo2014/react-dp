@@ -3,7 +3,8 @@ import {render} from 'react-dom'
 
 import App from './App'
 require('font-awesome-webpack')
+console.log(App)
 render(
-    <App />,
+    <App/>,
     document.getElementById('root')
 )
