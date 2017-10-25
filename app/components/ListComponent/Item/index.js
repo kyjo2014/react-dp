@@ -4,6 +4,7 @@ import styles from './styles.less'
 
 class Item extends Component {
     constructor(props, context) {
+        super(props,context)
         this.shouldComponentUpdate = PureMixinRender.shouldComponentUpdate
     }
     render() {

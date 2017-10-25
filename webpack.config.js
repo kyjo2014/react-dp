@@ -37,7 +37,7 @@ module.exports = {
             }, {
                 test: /\.less$/,
                 exclude: [
-                    path.resolve(__dirname, 'app/style'),
+                    path.resolve(__dirname, 'node_modules'),
                     path.resolve(__dirname, 'app/style')
                 ],
                 use: [{
@@ -49,7 +49,21 @@ module.exports = {
                 }, {
                     loader: 'less-loader'
                 }]
-            }, {
+            },{
+                //less文件 ， sass（scss）文件类似
+                //loader的顺序是从下往上，也就是less先执行，最后执行style
+                test: /\.less$/,
+                include: path.resolve(__dirname, 'app/style'),
+                use: [{
+                  loader: 'style-loader'
+                }, {
+                  loader: 'css-loader'
+                }, {
+                  loader: 'postcss-loader'
+                }, {
+                  loader: 'less-loader'
+                }]
+              }, {
                 //图片文件
                 test: /\.(png|jpg|svg|gif|jpeg|bmp)$/i,
                 use: [{

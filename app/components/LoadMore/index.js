@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PureMixinRender from 'react-addons-pure-render-mixin'
-import styles from './styles'
+import styles from './styles.less'
 
 class LoadMore extends Component {
     constructor(props, context) {
