@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import ReactSwipe from 'react-swipe'
 
-import '../../style.category.less'
+import '../../style/category'
 
 class Category extends Component {
     static propTypes = {}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {connecct} from 'react-redux'
+import {connect} from 'react-redux'
 
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
@@ -40,4 +40,4 @@ class Home extends Component {
 const mapStateMapProps = state => ({
         cityName: state.userInfo.cityName
     })
-    export default connecct(mapStateMapProps)(Home)
+    export default connect(mapStateMapProps)(Home)

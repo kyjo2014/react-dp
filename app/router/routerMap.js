@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {BroswerRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Home from '../containers/Home'
@@ -45,10 +45,11 @@ class App extends Component {
                 <Route component={NotFound}/>
             </Switch>
         );
+        console.log(Router)
         return (
+           
             <Router>
                 <div>
-}
                     {this.state.initialDone
                         ? Routes
                         : (
@@ -59,12 +60,12 @@ class App extends Component {
         )
     }
 }
-const mapStateToProps = state =>({})
+const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => ({
-    updateInfo: data =>dispatch(updateUserInfo(data))
+    updateInfo: data => dispatch(updateUserInfo(data))
 })
 
-const reduxApp = connect(mapStateToProps,mapDispatchToProps)(App)
+const reduxApp = connect(mapStateToProps, mapDispatchToProps)(App)
 
 export default reduxApp
